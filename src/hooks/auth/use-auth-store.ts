@@ -38,14 +38,7 @@ export const useAuthStore = () => {
   const dispatch = useAppDispatch();
 
   const auth = useAppSelector((state) => state.auth);
-  const {
-    _id,
-    status, 
-    uid, 
-    email, 
-    photoURL, 
-    role,
-  } = auth ;
+  const { uid, token } = auth ;
 
   const { findUserByEmail, startCreateUser } = useUsersStore();
 
